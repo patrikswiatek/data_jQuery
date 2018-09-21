@@ -1,4 +1,21 @@
-# jsgrid-express
-Sample project for jsgrid with ExpressJS REST service
+## [jQuery sorting table](https://codepen.io/patrikswiatek/pen/eLyLre)
+### How to run
+```
+open in your browser file with .html extension
+```
 
-![Demo](http://content.screencast.com/users/tabalinas/folders/Jing/media/3d39f0d8-f0a4-4ee0-b94d-8c3751719552/00000095.png)
+### Documentation
+  * #### [jQuery](https://reactjs.org/docs/getting-started.html)
+  * #### [Bootstrap Table](https://jquery.com)
+
+
+### Languages
+* #### HTML
+* #### CSS
+* #### JavaScript
+
+### Built With
+* #### IDE - Atom    
+
+### License
+* #### [MIT License](https://opensource.org/licenses/MIT)

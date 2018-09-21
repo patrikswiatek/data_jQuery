@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Table jQuery</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/app.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div id='box'>
+      <ul id='result' />
+    </div>
+    <main id="table">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Team</th>
+            <th>Downtown</th>
+            <th>Vision Deffect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <form class="add-form">
+            <tr class="first-tr">
+              <th class="static">
+                <input type="text" class="form-control" name="name">
+              </th>
+              <th class="static">
+                <input type="number" class="form-control" name="age">
+              </th>
+              <th class="static">
+                <select class="form-control" id="team">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </th>
+              <th class="static">
+                <input type="text" class="form-control" name="downtown">
+              </th>
+              <th class="static">
+                <select class="form-control" id="defVision">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </th>
+              <th class="static">
+                <button type="submit" class="button add">+</button>
+              </th>
+            </tr>
+          </form>
+          <tr>
+            <td>Alan Shark</td>
+            <td>21</td>
+            <td>4</td>
+            <td>Gaj</td>
+            <td>No</td>
+            <td class="static"><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Jenny Smith</td>
+            <td>31</td>
+            <td>4</td>
+            <td>Gaj</td>
+            <td>No</td>
+            <td class="static"><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Ann Novak</td>
+            <td>26</td>
+            <td>3</td>
+            <td>Miami</td>
+            <td>No</td>
+            <td class="static"><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Gary Smith</td>
+            <td>30</td>
+            <td>6</td>
+            <td>Krzyki</td>
+            <td>No</td>
+            <td class="static"><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Sophia High</td>
+            <td>24</td>
+            <td>6</td>
+            <td>Bezrzecze</td>
+            <td>No</td>
+            <td class="static"><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Sophia Low</td>
+            <td>23</td>
+            <td>10</td>
+            <td>Południe</td>
+            <td>Yes</td>
+            <td class="static"><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Daren Novak</td>
+            <td>22</td>
+            <td>2</td>
+            <td>Grunwal</td>
+            <td>No</td>
+            <td class="static"><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Amanda Parker</td>
+            <td>31</td>
+            <td>4</td>
+            <td>Gaj</td>
+            <td>No</td>
+            <td class="static"><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Gary Smith</td>
+            <td>30</td>
+            <td>6</td>
+            <td>Krzyki</td>
+            <td>No</td>
+            <td class="static"><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Dylan Sharks</td>
+            <td>35</td>
+            <td>6</td>
+            <td>Olewkowo</td>
+            <td>Yes</td>
+            <td class="static"><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Russel Dino</td>
+            <td>30</td>
+            <td>1</td>
+            <td>Kamienna</td>
+            <td>No</td>
+            <td class="static"><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Odessa Beck</td>
+            <td>51</td>
+            <td>5</td>
+            <td>Shetland</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Dexter Obrien</td>
+            <td>38</td>
+            <td>4</td>
+            <td>Wigtownshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Madaline Bush</td>
+            <td>2</td>
+            <td>2</td>
+            <td>Brecknockshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Nyssa Duffy</td>
+            <td>25</td>
+            <td>8</td>
+            <td>Berwickshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Isaac Schneider</td>
+            <td>13</td>
+            <td>6</td>
+            <td>Orkney</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Charity Boone</td>
+            <td>23</td>
+            <td>7</td>
+            <td>Perthshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Ori Gardner</td>
+            <td>61</td>
+            <td>10</td>
+            <td>Wiltshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Heather Pruitt</td>
+            <td>87</td>
+            <td>3</td>
+            <td>Northamptonshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Lael Holder</td>
+            <td>92</td>
+            <td>3</td>
+            <td>Warwickshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Rana Snyder</td>
+            <td>42</td>
+            <td>5</td>
+            <td>Caithness</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Uta Walton</td>
+            <td>40</td>
+            <td>6</td>
+            <td>Ayrshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Martena Crawford</td>
+            <td>14</td>
+            <td>1</td>
+            <td>Shetland</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Adam Case</td>
+            <td>18</td>
+            <td>2</td>
+            <td>West Lothian</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Amelia Palmer</td>
+            <td>1</td>
+            <td>3</td>
+            <td>Midlothian</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Sigourney Gardner</td>
+            <td>45</td>
+            <td>9</td>
+            <td>Kinross-shire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Maxwell Berger</td>
+            <td>16</td>
+            <td>7</td>
+            <td>Fife</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Halee Franks</td>
+            <td>52</td>
+            <td>2</td>
+            <td>Cornwall</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Brenna Case</td>
+            <td>49</td>
+            <td>9</td>
+            <td>Westmorland</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Illiana Mack</td>
+            <td>98</td>
+            <td>9</td>
+            <td>Banffshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Connor Pollard</td>
+            <td>4</td>
+            <td>8</td>
+            <td>Argyllshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Basia Madden</td>
+            <td>22</td>
+            <td>3</td>
+            <td>Kent</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Kirsten Gray</td>
+            <td>44</td>
+            <td>4</td>
+            <td>Kincardineshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Xerxes Flores</td>
+            <td>84</td>
+            <td>6</td>
+            <td>Sutherland</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Kadeem Rivera</td>
+            <td>27</td>
+            <td>9</td>
+            <td>Berwickshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Baker Boyle</td>
+            <td>22</td>
+            <td>9</td>
+            <td>Pembrokeshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Upton Donovan</td>
+            <td>56</td>
+            <td>9</td>
+            <td>Stirlingshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Stephanie Hendrix</td>
+            <td>39</td>
+            <td>6</td>
+            <td>Suffolk</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Fuller Marquez</td>
+            <td>17</td>
+            <td>5</td>
+            <td>Wiltshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Aristotle Sweeney</td>
+            <td>66</td>
+            <td>6</td>
+            <td>Derbyshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Mallory Lowery</td>
+            <td>14</td>
+            <td>9</td>
+            <td>Gloucestershire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Linus Hyde</td>
+            <td>99</td>
+            <td>4</td>
+            <td>Wigtownshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Joseph Graham</td>
+            <td>67</td>
+            <td>4</td>
+            <td>Morayshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Mira Gilliam</td>
+            <td>49</td>
+            <td>5</td>
+            <td>Banffshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Beatrice Richmond</td>
+            <td>1</td>
+            <td>3</td>
+            <td>Merionethshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Elaine Mclean</td>
+            <td>11</td>
+            <td>9</td>
+            <td>Lancashire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Odysseus Anderson</td>
+            <td>71</td>
+            <td>5</td>
+            <td>Herefordshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Brennan Jones</td>
+            <td>28</td>
+            <td>8</td>
+            <td>Aberdeenshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Daniel Barton</td>
+            <td>38</td>
+            <td>5</td>
+            <td>Norfolk</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Jescie Byrd</td>
+            <td>18</td>
+            <td>10</td>
+            <td>Argyllshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Cassandra Gentry</td>
+            <td>42</td>
+            <td>10</td>
+            <td>Stirlingshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Jessamine Wallace</td>
+            <td>46</td>
+            <td>6</td>
+            <td>West Lothian</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Adele Chapman</td>
+            <td>16</td>
+            <td>2</td>
+            <td>Shetland</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Kellie Ruiz</td>
+            <td>93</td>
+            <td>10</td>
+            <td>Cambridgeshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Hermione Hayes</td>
+            <td>58</td>
+            <td>9</td>
+            <td>Anglesey</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Erasmus Britt</td>
+            <td>41</td>
+            <td>3</td>
+            <td>Lancashire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Allen Vazquez</td>
+            <td>46</td>
+            <td>6</td>
+            <td>Yorkshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Adam Cervantes</td>
+            <td>42</td>
+            <td>9</td>
+            <td>Cardiganshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Aubrey Moody</td>
+            <td>36</td>
+            <td>8</td>
+            <td>Fife</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Kylan Garrison</td>
+            <td>51</td>
+            <td>8</td>
+            <td>Stirlingshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Sebastian Day</td>
+            <td>22</td>
+            <td>1</td>
+            <td>Ayrshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Carter Valentine</td>
+            <td>8</td>
+            <td>7</td>
+            <td>Angus</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Julian Garner</td>
+            <td>70</td>
+            <td>8</td>
+            <td>Perthshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Chanda Landry</td>
+            <td>4</td>
+            <td>1</td>
+            <td>Herefordshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Elliott Terrell</td>
+            <td>55</td>
+            <td>1</td>
+            <td>Derbyshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Kiayada Cobb</td>
+            <td>39</td>
+            <td>10</td>
+            <td>Lincolnshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Lewis Marks</td>
+            <td>83</td>
+            <td>10</td>
+            <td>Somerset</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Jarrod Whitney</td>
+            <td>26</td>
+            <td>4</td>
+            <td>Clackmannanshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Cally Douglas</td>
+            <td>59</td>
+            <td>10</td>
+            <td>Bedfordshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Deacon Kirk</td>
+            <td>49</td>
+            <td>6</td>
+            <td>Caithness</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Levi Alvarado</td>
+            <td>41</td>
+            <td>3</td>
+            <td>Buteshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Erin Clemons</td>
+            <td>85</td>
+            <td>6</td>
+            <td>Herefordshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Doris Durham</td>
+            <td>85</td>
+            <td>7</td>
+            <td>Lanarkshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Wallace Burton</td>
+            <td>79</td>
+            <td>4</td>
+            <td>Essex</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Kareem Peterson</td>
+            <td>86</td>
+            <td>4</td>
+            <td>Argyllshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Zeph Daniel</td>
+            <td>63</td>
+            <td>7</td>
+            <td>Suffolk</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Shea Randolph</td>
+            <td>26</td>
+            <td>8</td>
+            <td>Bedfordshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Lucy Woodward</td>
+            <td>31</td>
+            <td>3</td>
+            <td>Lancashire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Hayden Stafford</td>
+            <td>55</td>
+            <td>5</td>
+            <td>Stirlingshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Cade Mcintosh</td>
+            <td>49</td>
+            <td>9</td>
+            <td>Orkney</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>George Ewing</td>
+            <td>59</td>
+            <td>6</td>
+            <td>Angus</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Kennan Horn</td>
+            <td>91</td>
+            <td>8</td>
+            <td>Ayrshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Jordan Jimenez</td>
+            <td>32</td>
+            <td>3</td>
+            <td>East Lothian</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Miranda Black</td>
+            <td>8</td>
+            <td>6</td>
+            <td>East Lothian</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Camden Hanson</td>
+            <td>17</td>
+            <td>6</td>
+            <td>Clackmannanshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Bianca Carr</td>
+            <td>21</td>
+            <td>10</td>
+            <td>Bedfordshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Sonia Collier</td>
+            <td>5</td>
+            <td>9</td>
+            <td>Selkirkshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Melanie Griffin</td>
+            <td>95</td>
+            <td>3</td>
+            <td>Cornwall</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Marvin Watkins</td>
+            <td>18</td>
+            <td>5</td>
+            <td>Midlothian</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Raya Tillman</td>
+            <td>29</td>
+            <td>9</td>
+            <td>Kincardineshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Madeson Francis</td>
+            <td>50</td>
+            <td>8</td>
+            <td>Sussex</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Aline Mcneil</td>
+            <td>81</td>
+            <td>6</td>
+            <td>Bedfordshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Rana Pugh</td>
+            <td>34</td>
+            <td>9</td>
+            <td>Orkney</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Zeph Thomas</td>
+            <td>89</td>
+            <td>8</td>
+            <td>Fife</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Dora Duke</td>
+            <td>39</td>
+            <td>9</td>
+            <td>East Lothian</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Stephanie Frank</td>
+            <td>21</td>
+            <td>4</td>
+            <td>Cardiganshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Myles Wood</td>
+            <td>26</td>
+            <td>3</td>
+            <td>Orkney</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Kirsten Frank</td>
+            <td>8</td>
+            <td>6</td>
+            <td>Dumfriesshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Frances Miles</td>
+            <td>33</td>
+            <td>6</td>
+            <td>Ross-shire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Eugenia Dawson</td>
+            <td>69</td>
+            <td>4</td>
+            <td>Kinross-shire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Nora French</td>
+            <td>45</td>
+            <td>5</td>
+            <td>Radnorshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Yen Williamson</td>
+            <td>85</td>
+            <td>8</td>
+            <td>Cumberland</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Jenette Buck</td>
+            <td>97</td>
+            <td>2</td>
+            <td>Buckinghamshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Cedric Chen</td>
+            <td>4</td>
+            <td>1</td>
+            <td>Orkney</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Chandler Cash</td>
+            <td>18</td>
+            <td>7</td>
+            <td>Dorset</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Ignatius Hardin</td>
+            <td>61</td>
+            <td>4</td>
+            <td>Bedfordshire</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Lance Barrera</td>
+            <td>73</td>
+            <td>1</td>
+            <td>Cheshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Cruz Moss</td>
+            <td>84</td>
+            <td>3</td>
+            <td>Caithness</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Ingrid Payne</td>
+            <td>1</td>
+            <td>9</td>
+            <td>West Lothian</td>
+            <td>No</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+          <tr>
+            <td>Joel Mckay</td>
+            <td>29</td>
+            <td>8</td>
+            <td>Nottinghamshire</td>
+            <td>Yes</td>
+            <td><span class="button del">-</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="alert">
+        <h2>Error !</h2>
+        <p>Please fill in all fields and resubmit the form.</p>
+        <span class="button remove">-</span>
+      </div>
+    </main>
+  </div>
+  </div>
+</body>
+
+</html>
